@@ -1,20 +1,31 @@
+import java.util.Random;
 import java.util.Scanner;
 
 public class Clase5 {
     public static void main(String[] Args){
-        //4) Calculadora de propinas:
-        //Pídele al usuario que ingrese el total de la cuenta en un restaurante.
-        //Pídele al usuario que ingrese el porcentaje de propina que desea dejar.
-        //Calcula el monto de la propina utilizando la fórmula: propina = totalCuenta * (porcentajePropina / 100).
+        //Juego de adivinar el número:
+        //Genera un número aleatorio entre 1 y 100. Pídele al usuario que adivine el número.
+                Random random = new Random();
+                int randomNumber = random.nextInt(101); // se genera un número random entre 0-100
+                int intentos = 0;
 
-        Scanner cargarDatos = new Scanner(System.in);
-        System.out.println("Ingrese el total consumido el día de hoy");
-        double totalConsumido = cargarDatos.nextDouble();
-        System.out.println("Ingrese el porcentaje de propina que desea dejar");
-        double porcentajePropina = cargarDatos.nextInt();
-        double propina = totalConsumido * (porcentajePropina / 100);
-        System.out.println("La propina que desea dejar es de :" + propina + " dólares");
-        System.out.println("Gracias por visitarnos, vuelva pronto!");
+                Scanner scanner = new Scanner(System.in);
+                System.out.println("Adivina un número random entre 0 y 100!");
 
-    }
-}
+                while (true) {
+                    System.out.print("Digita tu número: ");
+                    int guess = scanner.nextInt();
+                    intentos++;
+
+                    if (guess < randomNumber) {
+                        System.out.println("Muy bajito! Intenta de nuevo.");
+                    } else if (guess > randomNumber) {
+                        System.out.println("Muy alto! Intenta de nuevo.");
+                    } else {
+                        System.out.println("Felicitaciones! Adivinaste el número en " + intentos + " intentos.");
+                        break;
+                    }
+                }
+                scanner.close();
+            }
+        }
