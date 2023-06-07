@@ -2,17 +2,16 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] Args){
-        // Calculadora de edad de perros:
-        //Pídele al usuario que ingrese la edad de su perro.
-        //Convierte esa edad a años de perro (se dice que 1 año humano equivale a 7 años de perro).
+        //Conversor de millas a kilómetros:
+        //Pídele al usuario que ingrese una distancia en millas.
+        //Convierte la distancia a kilómetros utilizando la fórmula: kilómetros = millas * 1.60934.
+        //Muestra la distancia en kilómetros al usuario.
 
         Scanner cargarDatos = new Scanner(System.in);
-        System.out.println("Ingrese la edad de su perro (en años)");
-        int edadPerro = cargarDatos.nextInt();
-        System.out.println("Ingrese su edad Humano (en años)");
-        int edadHumano = cargarDatos.nextInt();
-        int edadConvertida = edadPerro*edadHumano;
-        System.out.println("Su edad convertida a años perro es :" + edadConvertida + " años");
+        System.out.println("Ingrese una distancia en millas");
+        double millas = cargarDatos.nextDouble();
+        double distanciaEnKilometros = (millas * 1.60934);
+        System.out.println("La distancia en Kilometros es :" + distanciaEnKilometros + " Km");
 
     }
 }
