@@ -2,15 +2,19 @@ import java.util.Scanner;
 
 public class Clase5 {
     public static void main(String[] Args){
-        //Calculadora de edad de perros:
-        //Pídele al usuario que ingrese la edad de su perro.
-        //Convierte esa edad a años de perro (se dice que 1 año humano equivale a 7 años de perro).
+        //4) Calculadora de propinas:
+        //Pídele al usuario que ingrese el total de la cuenta en un restaurante.
+        //Pídele al usuario que ingrese el porcentaje de propina que desea dejar.
+        //Calcula el monto de la propina utilizando la fórmula: propina = totalCuenta * (porcentajePropina / 100).
 
         Scanner cargarDatos = new Scanner(System.in);
-        System.out.println("Ingrese la edad de su perro (en años)");
-        int edadPerro = cargarDatos.nextInt();
-        int edadConvertida = (edadPerro * 7);
-        System.out.println("La edad convertida a años perro es :" + edadConvertida + " años");
+        System.out.println("Ingrese el total consumido el día de hoy");
+        double totalConsumido = cargarDatos.nextDouble();
+        System.out.println("Ingrese el porcentaje de propina que desea dejar");
+        double porcentajePropina = cargarDatos.nextInt();
+        double propina = totalConsumido * (porcentajePropina / 100);
+        System.out.println("La propina que desea dejar es de :" + propina + " dólares");
+        System.out.println("Gracias por visitarnos, vuelva pronto!");
 
     }
 }
