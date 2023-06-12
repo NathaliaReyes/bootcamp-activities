@@ -18,8 +18,8 @@ public class CincoNumeros {
             numeros[contador] = numero;
         }
         System.out.println("Los números que usted ingresó, son: ");
-        for (int contador = 0; contador < numeros.length; contador++){
-            System.out.print(numeros[contador]);
+        for (int numero : numeros) {
+            System.out.print(numero);
         }
 
         int mayor = 0;
@@ -34,16 +34,15 @@ public class CincoNumeros {
             }
         }
         System.out.println(" ");
-        System.out.println("El número mayor es: " + mayor);
-        System.out.println("El número menor es: " + menor);
+        System.out.println("El número mayor es : " + mayor);
+        System.out.println("El número menor es : " + menor);
 
         int sumatoria = 0;
-        for(int contador = 0; contador < numeros.length; contador++){
-            int num = numeros[contador];
+        for (int num : numeros) {
             sumatoria += num;
         }
-        System.out.println("La sumatoria es: " + sumatoria);
+        System.out.println("La sumatoria es : " + sumatoria);
         float promedio = (float) sumatoria / numeros.length;
-        System.out.println("El promedio es :" + promedio);
+        System.out.println("El promedio es : " + promedio);
     }
 }
